@@ -1,0 +1,38 @@
+{
+  "categories": [
+    {
+      "name": "Наушники",
+      "products": [
+        {
+          "name": "Razer Kraken Pro",
+          "price": 1000,
+          "desc": "123424234 Razer Kraken ProRazer Kraken ProRazer Kraken ProRazer Kraken Pro",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Клавиатуры",
+      "products": [
+        {
+          "name": "Razer BlackWidow V3 Pro",
+          "price": 1000,
+          "desc": "Razer BlackWidow V3 Pro",
+          "image": ""
+        },
+        {
+          "name": "Razer BlackWidow V3 Pro",
+          "price": 5000,
+          "desc": "Razer BlackWidow V3 Pro",
+          "image": ""
+        },
+        {
+          "name": "Razer BlackWidow V3 Pro",
+          "price": 10000,
+          "desc": "Razer BlackWidow V3 Pro",
+          "image": ""
+        }
+      ]
+    }
+  ]
+}
