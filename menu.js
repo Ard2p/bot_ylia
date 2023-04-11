@@ -48,14 +48,14 @@ class Menu {
 
                 keyboard_items = [
                     [Markup.button.callback('Назад', 'category')]
-                ]         
-                
+                ]
+
                 this.products.categories[cat_id].products.forEach((value, key) => {
-                    if(!money || money && value.price <= money)
+                    if (!money || money && value.price <= money)
                         keyboard_items.push([Markup.button.callback(value.name, 'product_' + cat_id + '_' + key)])
                 })
 
-                text =  this.products.categories[cat_id].name
+                text = this.products.categories[cat_id].name
                 keyboard = Markup.inlineKeyboard(keyboard_items)
                 break
 
@@ -65,12 +65,19 @@ class Menu {
 
                 keyboard_items = [
                     [Markup.button.callback('Назад', 'products_' + cat_id)]
-                ]           
+                ]
 
                 product = this.products.categories[cat_id].products[product_id]
 
                 text = product.desc
                 keyboard = Markup.inlineKeyboard(keyboard_items)
+
+                let image = product.url ? { url:  product.url } : { source:  product.source }
+                return ctx.replyWithPhoto(image, {
+                    parse_mode: 'HTML',
+                    caption: text,
+                    ...keyboard
+                })
                 break
         }
 
